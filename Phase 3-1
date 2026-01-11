@@ -1,0 +1,25 @@
+【実装指示 - Phase 3-1: 基盤構築】
+
+Phase 2で設計したアーキテクチャに基づき、以下を実装してください。
+
+【今回のスコープ】
+- Tauriプロジェクト初期化
+- React + TypeScript + Tailwind CSS セットアップ
+- ディレクトリ構造の作成
+- 基本的な型定義（駒、盤面、手）
+- 開発環境セットアップスクリプト
+
+【型定義の要件】
+```typescript
+// 以下の型を定義すること
+type PieceType = 'FU' | 'KY' | 'KE' | 'GI' | 'KI' | 'KA' | 'HI' | 'OU' | 
+                 'TO' | 'NY' | 'NK' | 'NG' | 'UM' | 'RY';
+type Player = 'sente' | 'gote';
+type Position = { row: number; col: number };
+type Move = { from: Position | null; to: Position; piece: PieceType; promote?: boolean };
+```
+
+【検証方法】
+- `npm install` が成功すること
+- `npm run tauri dev` で空のウィンドウが起動すること
+- TypeScriptの型チェックがパスすること
